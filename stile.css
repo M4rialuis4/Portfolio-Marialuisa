@@ -1,0 +1,247 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.logo {
+    display: block;
+    margin-bottom: 10px;
+    width: 100px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.linea {
+    width: 75%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.titoloRosa {
+    font-family: "Amaranth", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #F89EC4;
+    font-size: 40px;
+    margin: 0;
+}
+
+.p-contatti {
+    margin: 0;
+    font-family: "Amaranth", sans-serif;
+    color: #fff;
+    font-size: 23px;
+    margin: 10px 0;
+}
+
+h1 {
+    font-family: "Amaranth", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #F89EC4;
+    font-size: 40px;
+    margin: 0;
+}
+
+.titolo2Rosa {
+    font-family: "Amaranth", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #F89EC4;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+p {
+    font-family: "Amaranth", sans-serif;
+    color: #fff;
+    font-size: 23px;
+    margin: 30px 0;
+}
+
+.bottoneContatti {
+    background-color: #F89EC4;
+    font-family: "Amaranth", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+footer .linea {
+    width: 75%;
+    margin: 0;
+}
+
+footer p {
+    color: #fff;
+    margin: 10px 0;
+    text-align: center;
+}
+
+hr.linea {
+    border: 0;
+    border-top: 1px solid #fff;
+    width: 75%;
+    margin: 10px 0;
+}
+
+.breadcrumb {
+    text-decoration: none;
+    color: #fff;
+}
+
+.immaginiHome {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.immaginiHome a {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    overflow: hidden; /* taglia l'immagine che esce */
+}
+
+.immaginiHome img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+
+@media (max-width: 768px) { /* Applica le modifiche solo se la lunghezza della finestra è minore di 768px */
+    .immaginiHome a {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+.img {
+    width: 200px;
+    height: 200px;
+     border-radius: 50%;
+  object-fit: cover; /* utile per ritagliare bene l'immagine se non è quadrata */
+}
+.menu {
+  display: flex;
+  justify-content: center; /* li centra orizzontalmente */
+  gap: 20px; /* spazio tra i bottoni */
+  margin-bottom: 30px;
+}
+
+/*inizio del responsive*/
+@media (max-width: 768px) {
+
+    /* Layout generale */
+    main {
+        padding: 15px;
+    }
+
+    /* Logo */
+    .logo {
+        width: 80px;
+        margin-bottom: 5px;
+    }
+
+    /* Linee */
+    .linea,
+    footer .linea,
+    hr.linea {
+        width: 90%;
+    }
+
+    /* Titoli */
+    h1,
+    .titoloRosa {
+        font-size: 28px;
+    }
+
+    .titolo2Rosa {
+        font-size: 22px;
+    }
+
+    /* Testi */
+    p,
+    .p-contatti {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    /* Bottone */
+    .bottoneContatti {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* Immagini home */
+    .immaginiHome {
+        margin-left: 5%;
+        margin-right: 5%;
+        gap: 10px;
+    }
+
+    .immaginiHome a {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    /* Immagini circolari */
+    .img {
+        width: 140px;
+        height: 140px;
+    }
+
+    /* Footer */
+    footer p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
